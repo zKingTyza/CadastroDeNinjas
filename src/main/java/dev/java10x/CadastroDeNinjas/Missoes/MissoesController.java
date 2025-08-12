@@ -17,7 +17,7 @@ public class MissoesController {
     }
 
     // POST -- CRIAR AS MISSOES
-    @PostMapping("criar")
+    @PostMapping("/criar")
     public String criarMissao(){
         return "Missao criada com sucesso";
     }
