@@ -38,8 +38,11 @@ public class NinjaService {
     }
 
     //LOGICA PARA ATUALIZAR NINJA
-
-    public NinjaModel alterarNinjaPorId(Long id){
-
+    public NinjaModel autalizarNinja(Long id, NinjaModel ninjaAtualizado){
+        if(ninjaRepository.existsById(id)){
+            ninjaAtualizado.setId(id);
+            return ninjaRepository.save(ninjaAtualizado);
+        }
+        return null;
     }
 }
